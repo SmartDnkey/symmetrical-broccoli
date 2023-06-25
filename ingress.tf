@@ -7,6 +7,7 @@ resource "kubernetes_ingress_v1" "apirest-ingress" {
       "kubernetes.io/ingress.global-static-ip-name" = "apirest-ip"
       "networking.gke.io/managed-certificates"      = google_certificate_manager_certificate.apirest-cert.name
       "kubernetes.io/ingress.class"                 = "gce"
+      "kubernetes.io/ingress.allow-http" = false
     }
   }
   spec {
