@@ -21,7 +21,7 @@ resource "kubernetes_deployment" "apirest" {
       }
       spec {
         container {
-          image = "europe-west2-docker.pkg.dev/mythic-hulling-390415/apirest/apirest:1.1"
+          image = "europe-west2-docker.pkg.dev/mythic-hulling-390415/apirest/apirest:1.2"
           name  = "apirest"
           port {
             container_port = 8000
